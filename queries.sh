@@ -31,7 +31,7 @@ echo "$($PSQL "SELECT t.name FROM teams as t inner join games as g on t.team_id 
 echo -e "\nList of teams who played in the 2014 'Eighth-Final' round:"
 echo "$($PSQL "select distinct(name) from teams inner join games on teams.team_id = games.winner_id or teams.team_id = games.opponent_id where games.year=2014 and games.round = 'Eighth-Final' order by name asc")"
 
-cho -e "\nList of unique winning team names in the whole data set:"
+echo -e "\nList of unique winning team names in the whole data set:"
 echo "$($PSQL "select distinct(name) from teams inner join games on teams.team_id = games.winner_id order by name asc")"
 
 echo -e "\nYear and team name of all the champions:"
