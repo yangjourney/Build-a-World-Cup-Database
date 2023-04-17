@@ -20,6 +20,18 @@ SET default_tablespace = '';
 
 SET default_table_access_method = heap;
 
+DROP DATABASE worldcup;
+--
+-- Name: worldcup; Type: DATABASE; Schema: -; Owner: freecodecamp
+--
+
+CREATE DATABASE worldcup WITH TEMPLATE = template0 ENCODING = 'UTF8' LC_COLLATE = 'C.UTF-8' LC_CTYPE = 'C.UTF-8';
+
+
+ALTER DATABASE worldcup OWNER TO freecodecamp;
+
+\connect worldcup
+
 --
 -- Name: games; Type: TABLE; Schema: public; Owner: freecodecamp
 --
